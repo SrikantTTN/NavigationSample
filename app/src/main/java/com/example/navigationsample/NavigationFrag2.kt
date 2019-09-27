@@ -27,7 +27,7 @@ class NavigationFrag2 : Fragment(){
         super.onViewCreated(view, savedInstanceState)
         Log.e(this.javaClass.name,"ViewCreate")
         next.setOnClickListener {
-            findNavController().navigate(R.id.action_navigationFrag2_to_nav_graph)
+            findNavController().navigate(R.id.action_navigationFrag2_to_navigationFrag3)
         }
         next2.setOnClickListener {
             findNavController().navigate(R.id.alertDialog)

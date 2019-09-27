@@ -23,9 +23,6 @@
                 android:id="@+id/action_navigationFrag2_to_navigationFrag3"
                 app:destination="@id/navigationFrag3"
                 app:popUpToInclusive="true" />
-        <action
-                android:id="@+id/action_navigationFrag2_to_nav_graph"
-                app:destination="@id/nav_graph2" />
     </fragment>
     <fragment
             android:id="@+id/navigationFrag3"
@@ -34,5 +31,4 @@
     <dialog
             android:id="@+id/alertDialog"
             android:name="com.example.navigationsample.CustomDialog" />
-    <include app:graph="@navigation/nav_graph2" />
 </navigation>
