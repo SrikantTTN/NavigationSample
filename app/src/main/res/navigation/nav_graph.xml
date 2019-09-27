@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/navigationFrag1">
+
+    <fragment
+            android:id="@+id/navigationFrag1"
+            android:name="com.example.navigationsample.NavigationFrag1"
+            android:label="NavigationFrag1">
+        <action
+                android:id="@+id/action_navigationFrag1_to_navigationFrag2"
+                app:destination="@id/navigationFrag2"
+                app:launchSingleTop="false"
+                app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+            android:id="@+id/navigationFrag2"
+            android:name="com.example.navigationsample.NavigationFrag2"
+            android:label="NavigationFrag2">
+        <action
+                android:id="@+id/action_navigationFrag2_to_navigationFrag3"
+                app:destination="@id/navigationFrag3"
+                app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_navigationFrag2_to_nav_graph"
+                app:destination="@id/nav_graph2" />
+    </fragment>
+    <fragment
+            android:id="@+id/navigationFrag3"
+            android:name="com.example.navigationsample.NavigationFrag3"
+            android:label="NavigationFrag3" />
+    <dialog
+            android:id="@+id/alertDialog"
+            android:name="com.example.navigationsample.CustomDialog" />
+    <include app:graph="@navigation/nav_graph2" />
+</navigation>
