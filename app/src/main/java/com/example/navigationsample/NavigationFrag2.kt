@@ -12,22 +12,31 @@ import kotlinx.android.synthetic.main.frag2_navigation.*
 /**
  * Created by Srikant Karnani on 25/9/19.
  */
-class NavigationFrag2 : Fragment(){
+class NavigationFrag2 : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         Log.e(this.javaClass.name, "CreateView")
         return inflater.inflate(R.layout.frag2_navigation, container, false)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e(this.javaClass.name,"Create")
+        Log.e(this.javaClass.name, "Create")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.e(this.javaClass.name,"ViewCreate")
+        Log.e(this.javaClass.name, "ViewCreate")
         next.setOnClickListener {
-            findNavController().navigate(R.id.action_navigationFrag2_to_navigationFrag3)
+            findNavController().navigate(
+                NavigationFrag2Directions.actionNavigationFrag2ToNavigationFrag3(
+                    tiel.text.toString()
+                )
+            )
         }
         next2.setOnClickListener {
             findNavController().navigate(R.id.alertDialog)
@@ -36,36 +45,36 @@ class NavigationFrag2 : Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.e(this.javaClass.name,"ActivityCreate")
+        Log.e(this.javaClass.name, "ActivityCreate")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e(this.javaClass.name,"Resume")
+        Log.e(this.javaClass.name, "Resume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e(this.javaClass.name,"Pause")
+        Log.e(this.javaClass.name, "Pause")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e(this.javaClass.name,"Destroy")
+        Log.e(this.javaClass.name, "Destroy")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.e(this.javaClass.name,"DestroyView")
+        Log.e(this.javaClass.name, "DestroyView")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e(this.javaClass.name,"Stop")
+        Log.e(this.javaClass.name, "Stop")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.e(this.javaClass.name,"Start")
+        Log.e(this.javaClass.name, "Start")
     }
 }

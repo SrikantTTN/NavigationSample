@@ -27,7 +27,12 @@
     <fragment
             android:id="@+id/navigationFrag3"
             android:name="com.example.navigationsample.NavigationFrag3"
-            android:label="NavigationFrag3" />
+            android:label="NavigationFrag3" >
+        <argument
+                android:name="text"
+                app:argType="string"
+                app:nullable="true" />
+    </fragment>
     <dialog
             android:id="@+id/alertDialog"
             android:name="com.example.navigationsample.CustomDialog" />
