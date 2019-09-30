@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/navigationFrag1"
+            android:icon="@drawable/ic_sports"
+            android:title="Frag 1" />
+    <item
+            android:id="@+id/navigationFrag2"
+            android:icon="@drawable/ic_tv"
+            android:title="Frag 2" />
+    <item
+            android:id="@+id/navigationFrag3"
+            android:icon="@drawable/ic_user"
+            android:title="Frag 3" />
+</menu>
