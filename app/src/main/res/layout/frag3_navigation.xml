@@ -10,6 +10,7 @@
             android:layout_height="wrap_content"
             android:text="Navigation Fragment 3"
             android:textSize="24sp"
+            android:id="@+id/text"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.frag3_navigation.*
 
 /**
  * Created by Srikant Karnani on 25/9/19.
@@ -22,6 +23,8 @@ class NavigationFrag3 : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val get = arguments?.get("text")
+        text.text = "You got $get from deeplink"
         Log.e(this.javaClass.name,"ViewCreate")
     }
 
